@@ -1,0 +1,30 @@
+name: shujog_final
+description: A job marketplace app connecting workers and employers.
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  url_launcher: ^6.2.5
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  supabase_flutter: ^2.5.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo/logo-transparent.png
+
