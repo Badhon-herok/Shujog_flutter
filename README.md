@@ -1,20 +1,93 @@
-# Shujog
+# Shujog (Flutter)
 
-Shujog is a job-matching platform built with Flutter that connects employers and workers.
-It includes authentication, employer and worker dashboards, job posting and management,
-applications handling, notifications, and profile editing flows.
+Shujog is a Flutter mobile application for connecting **workers** and **employers** through job posting, applications, profiles, and notifications.
+
+## Highlights
+- Role-based experience (Worker / Employer)
+- Authentication (Login / Signup)
+- Employer: dashboard, manage jobs, settings/profile
+- Worker: dashboard, profile, applications
+- Notifications + notification settings
+- Shared theme + reusable widgets
+
+## Screens (Optional)
+> Add screenshots in `/assets/screenshots/` and link here.
+- Home / Dashboard
+- Manage Jobs
+- Profile / Settings
+- Notifications
+
+## Tech Stack
+- Flutter (Dart)
+- Backend: (Supabase / Firebase / REST API) — update this line based on what you used
+- State management: (setState / Provider / Riverpod / Bloc) — update if needed
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
+- Flutter SDK installed
+- Android Studio or VS Code
+- Android Emulator or a physical Android device
 
-A few resources to get you started if this is your first Flutter project:
+### Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Badhon-herok/Shujog_flutter.git
+   cd Shujog_flutter
+Install dependencies:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+bash
+flutter pub get
+Run the app:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-[samples, guidance on mobile development, and a full API reference.
----
-If you want the README to include a generated file tree, a shorter README, or a developer-focused section (API, CI, environment setup), tell me which format and I'll update it.
+bash
+flutter run
+Build (APK)
+bash
+flutter build apk --release
+Project Structure (High Level)
+This project follows a feature-based structure:
+
+lib/main.dart → App entry point
+
+lib/core/ → App-wide theme/config (e.g., app_colors.dart, app_theme.dart)
+
+lib/common/ → Shared widgets/components (e.g., buttons)
+
+lib/features/
+
+auth/
+
+presentation/pages/ → login_page.dart, signup_page.dart
+
+services/ → auth logic (e.g., auth_service.dart)
+
+home/
+
+presentation/pages/ → dashboards, profiles, job pages, settings, notifications
+
+presentation/widgets/ → feature widgets (e.g., dialogs)
+
+Configuration Notes
+Do not commit secrets (API keys, service credentials).
+
+If you use Firebase/Supabase, document required config files here (and keep secrets in local env / ignored files).
+
+Common Commands
+bash
+flutter clean
+flutter pub get
+flutter analyze
+flutter test
+Contributing
+Fork the repository
+
+Create a feature branch:
+
+bash
+git checkout -b feature/your-feature-name
+Commit changes:
+
+bash
+git commit -m "Add: your feature"
+Push and open a Pull Request
