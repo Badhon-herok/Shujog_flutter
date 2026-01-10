@@ -68,26 +68,3 @@ presentation/pages/ → dashboards, profiles, job pages, settings, notifications
 
 presentation/widgets/ → feature widgets (e.g., dialogs)
 
-Configuration Notes
-Do not commit secrets (API keys, service credentials).
-
-If you use Firebase/Supabase, document required config files here (and keep secrets in local env / ignored files).
-
-Common Commands
-bash
-flutter clean
-flutter pub get
-flutter analyze
-flutter test
-Contributing
-Fork the repository
-
-Create a feature branch:
-
-bash
-git checkout -b feature/your-feature-name
-Commit changes:
-
-bash
-git commit -m "Add: your feature"
-Push and open a Pull Request
